@@ -216,8 +216,8 @@ GRANDPA voter sets match validator sets.
 
 Set Id starts at 0 at genesis and increments after each set change block is finalized. Hence in normal operation it increments with epoch index but it is not the same as epoch index (Skipped epochs are not included).
 
-Round Number resets to 0 when Set Id changes.
-Note that the genesis block is assumed to have been finalized on round 0 so Set 0 actually starts voting on round number 1.
+Round Number starts at 1 at genesis and resets to 1 whenever Set Id changes.
+Round 0 is a stub round for the last finalized state (either genesis block or last finalized block of previous set).
 
 The Target for votes is the header hash together with the posterior state root hash, as described in GP Section 19.
 

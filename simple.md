@@ -939,7 +939,7 @@ Validator -> Validator
 ### CE 153: Warp Sync Request
 
 A request for a number of warp sync fragments starting at (and including) a given set id.
-The responding node should return as many sequential warp sync fragments as it can until the latest set has been reached or the message size is too big.
+The responding node should return as many sequential warp sync fragments as it can until the latest set has been reached or the maximum response number has been reached. This maximum is 32.
 If the responding node is unable to respond it should stop the stream.
 
 ```
